@@ -1,1 +1,1 @@
-# wog-mal
+# word of god
