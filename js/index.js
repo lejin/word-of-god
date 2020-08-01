@@ -1,3 +1,5 @@
+let bgColors = ["#B71C1C", "#880E4F", "#4A148C", "#1A237E", "#006064", "#33691E"];
+
 // Restores select box and checkbox state using the preferences
 // stored in chrome.storage.
 function restore_options() {
@@ -25,13 +27,19 @@ function restore_options() {
 }
 
 function generateRandomQuote(json) {
-    var randomNumber=getRandomInt(json.length);
+    setRandomBGColor();
+    var randomNumber = getRandomInt(json.length);
     document.getElementById('quote').textContent = json[randomNumber].quote;
     document.getElementById('verse').textContent = json[randomNumber].verse;
 }
 
+function setRandomBGColor() {
+    var randomNumber = getRandomInt(bgColors.length);
+    document.body.style.backgroundColor = bgColors[randomNumber];
+}
+
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
-  }
+}
 
 document.addEventListener('DOMContentLoaded', restore_options);
