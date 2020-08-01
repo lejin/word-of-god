@@ -14,5 +14,8 @@
   },
   "permissions": [
     "storage"
+  ],
+  "web_accessible_resources": [
+    "english.json", "malayalam.json"
   ]
 }
