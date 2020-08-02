@@ -3,20 +3,55 @@
 
 <head>
     <title>Language Options</title>
+    <link rel="stylesheet" href="/css/materialize.min.css">
+    <style>
+        body {
+            font-size: 12px;
+        }
+
+        .theme-color1 {
+            color: #4b2746 !important;
+        }
+
+        .theme-color2 {
+            color: #fdc473 !important;
+        }
+
+        #langText {
+            font-size: 14px;
+        }
+
+        #language {
+            font-size: 14px;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="row">
+        <form class="col s12">
+            <div class="row valign-wrapper">
+                <div class="col s4 theme-color1" id="langText">Language</div>
+                <div class="col s8">
+                    <select id="language">
+                        <option class="theme-color1" value="malayalam">Malayalam</option>
+                        <option class="theme-color1" value="english">English</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s4">
+                    <button class="btn amber" id="save">Save</button>
+                </div>
+                <div class="col s8">
+                    <div id="status"></div>
+                </div>
+            </div>
+        </form>
+    </div>
 
-    Language:
-    <select id="language">
-        <option value="malayalam">Malayalam</option>
-        <option value="english">English</option>
-    </select>
 
-
-    <div id="status"></div>
-    <button id="save">Save</button>
-
+    <script src="/js/materialize.min.js"></script>
     <script src="/js/options.js"></script>
 </body>
 

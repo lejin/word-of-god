@@ -9,7 +9,7 @@ function save_options() {
     status.textContent = 'Options saved.';
     setTimeout(function () {
       status.textContent = '';
-    }, 750);
+    }, 1500);
   });
 }
 
@@ -25,6 +25,13 @@ function restore_options() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', restore_options);
-document.getElementById('save').addEventListener('click',
-  save_options);
+function initMaterialSelect() {
+  var elems = document.querySelectorAll('select');
+  M.FormSelect.init(elems);
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  restore_options();
+  initMaterialSelect();
+});
+document.getElementById('save').addEventListener('click', save_options);

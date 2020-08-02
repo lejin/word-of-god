@@ -2,7 +2,7 @@ let bgColors = ["#B71C1C", "#880E4F", "#4A148C", "#1A237E", "#006064", "#33691E"
 
 // Restores select box and checkbox state using the preferences
 // stored in chrome.storage.
-function restore_options() {
+function showQuote() {
     // Use default value language=english.
     chrome.storage.sync.get({
         language: 'english'
@@ -42,4 +42,4 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
 }
 
-document.addEventListener('DOMContentLoaded', restore_options);
+document.addEventListener('DOMContentLoaded', showQuote);
