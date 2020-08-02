@@ -1,10 +1,202 @@
 [
-    {
-        "quote": "I Can Do All Things Through Christ Who Strengthens Me.",
-        "verse": "Philippians 4:13"
-    },
-    {
-        "quote": "For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, plans to give you hope and a future.",
-        "verse": "Jeremiah 29:11"
-    }
+ {
+   "verse": "Philippians 4:13",
+   "quote": "I Can Do All Things Through Christ Who Strengthens Me."
+ },
+ {
+   "verse": "Jeremiah 29:11",
+   "quote": "For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, plans to give you hope and a future."
+ },
+ {
+   "verse": "1 Corinthians 3:16",
+   "quote": "Do you not know that you are the temple of God, and that the Spirit of God dwells in you?"
+ },
+ {
+   "verse": "2 Corinthians 12:9",
+   "quote": "My grace is sufficient for you, for power is made perfect in weakness. I will rather boast most gladly of my weaknesses, in order that the power of Christ may dwell with me."
+ },
+ {
+   "verse": "Proverbs 4:23",
+   "quote": "With all vigilance guard your heart, for in it are the sources of life."
+ },
+ {
+   "verse": "John 1: 5",
+   "quote": "the light shines in the darkness, and the darkness has not overcome it."
+ },
+ {
+   "verse": "Isaiah 40:29",
+   "quote": "He gives power to the faint, abundant strength to the weak."
+ },
+ {
+   "verse": "Psalms 103:13",
+   "quote": "As a father has compassion on his children, so the Lord has compassion on those who fear him."
+ },
+ {
+   "verse": "Nahum 1:7",
+   "quote": "The Lord is good to those who wait for him, a refuge on the day of distress, Taking care of those who look to him for protection"
+ },
+ {
+   "verse": "1 Peter 4:16",
+   "quote": "But whoever is made to suffer as a Christian should not be ashamed but glorify God because of the name."
+ },
+ {
+   "verse": "Philippians 4:8",
+   "quote": "Finally, brothers, whatever is true, whatever is honourable, whatever is just, whatever is pure, whatever is lovely, whatever is gracious, if there is any excellence and if there is anything worthy of praise, think about these things."
+ },
+ {
+   "verse": "2 Corinthians 1:4",
+   "quote": "God of all encouragement, who encourages us in our every affliction, so that we may be able to encourage those who are in any affliction with the encouragement with which we ourselves are encouraged by God."
+ },
+ {
+   "verse": "Colossians 4:6",
+   "quote": "Let your speech always be gracious, seasoned with salt, so that you know how you should respond to each one."
+ },
+ {
+   "verse": "Romans 8:6",
+   "quote": "The concern of the flesh is death, but the concern of the spirit is life and peace."
+ },
+ {
+   "verse": "2 Corinthians 10:5",
+   "quote": "and every pretension raising itself against the knowledge of God, and take every thought captive in obedience to Christ"
+ },
+ {
+   "verse": "Mark 9:23",
+   "quote": "Jesus said to him, If you can! Everything is possible to one who has faith.”"
+ },
+ {
+   "verse": "Psalms 34:8",
+   "quote": "Taste and see that the Lord is good; blessed is the stalwart one who takes refuge in him."
+ },
+ {
+   "verse": "Galatians 5:13",
+   "quote": "For you were called for freedom, brothers. But do not use this freedom as an opportunity for the flesh; rather, serve one another through love."
+ },
+ {
+   "verse": "Hebrews 4:16",
+   "quote": "So let us confidently approach the throne of grace to receive mercy and to find grace for timely help."
+ },
+ {
+   "verse": "Matthew 22:39",
+   "quote": "The second is like it: You shall love your neighbour as yourself."
+ },
+ {
+   "verse": "Psalms 27:4",
+   "quote": "One thing I ask of the Lord ; this I seek: To dwell in the Lord ’s house all the days of my life, To gaze on the Lord ’s beauty, to visit his temple."
+ },
+ {
+   "verse": "Ephesians 4:32",
+   "quote": "be kind to one another, compassionate, forgiving one another as God has forgiven you in Christ."
+ },
+ {
+   "verse": "1 Thessalonians 5:15",
+   "quote": "See that no one returns evil for evil; rather, always seek what is good [both] for each other and for all."
+ },
+ {
+   "verse": "Hebrews 12:14",
+   "quote": "Strive for peace with everyone, and for that holiness without which no one will see the Lord."
+ },
+ {
+   "verse": "Matthew 6:6",
+   "quote": "But when you pray, go to your inner room, close the door, and pray to your Father in secret. And your Father who sees in secret will repay you."
+ },
+ {
+   "verse": "John 13:34",
+   "quote": "I give you a new commandment: love one another. As I have loved you, so you also should love one another."
+ },
+ {
+   "verse": "Isaiah 53:5",
+   "quote": "But he was pierced for our sins, crushed for our iniquity. He bore the punishment that makes us whole, by his wounds we were healed."
+ },
+ {
+   "verse": "Psalms 1:1‭",
+   "quote": "Blessed is the man who does not walk in the counsel of the wicked, Nor stand in the way of sinners, nor sit in company with scoffers."
+ },
+ {
+   "verse": "James 1:17",
+   "quote": "all good giving and every perfect gift is from above, coming down from the Father of lights, with whom there is no alteration or shadow caused by change."
+ },
+ {
+   "verse": "Zephaniah 2:3",
+   "quote": "Seek the Lord , all you humble of the land, who have observed his law; Seek justice, seek humility; Perhaps you will be sheltered on the day of the Lord ’s anger."
+ },
+ {
+   "verse": "Joshua 1:8",
+   "quote": "Do not let this book of the law depart from your lips. Recite it by day and by night, that you may carefully observe all that is written in it; then you will attain your goal; then you will succeed."
+ },
+ {
+   "verse": "John 7:38",
+   "quote": "Whoever believes in me, as scripture says: Rivers of living water will flow from within him."
+ },
+ {
+   "verse": "Hebrews 12:2",
+   "quote": "while keeping our eyes fixed on Jesus, the leader and perfecter of faith. For the sake of the joy that lay before him he endured the cross, despising its shame, and has taken his seat at the right of the throne of God."
+ },
+ {
+   "verse": "2 Corinthians 4:16",
+   "quote": "Therefore, we are not discouraged; rather, although our outer self is wasting away, our inner self is being renewed day by day."
+ },
+ {
+   "verse": "Romans 10:10",
+   "quote": "For one believes with the heart and so is justified, and one confesses with the mouth and so is saved."
+ },
+ {
+   "verse": "Exodus 20:16",
+   "quote": "You shall not bear false witness against your neighbour."
+ },
+ {
+   "verse": "2 Corinthians 3:17",
+   "quote": "Now the Lord is the Spirit, and where the Spirit of the Lord is, there is freedom."
+ },
+ {
+   "verse": "Psalms 121: 2",
+   "quote": "My help comes from the Lord , the maker of heaven and earth."
+ },
+ {
+   "verse": "John 3:36",
+   "quote": "Whoever believes in the Son has eternal life, but whoever disobeys the Son will not see life, but the wrath of God remains upon him."
+ },
+ {
+   "verse": "Proverbs 18:10",
+   "quote": "The name of the Lord is a strong tower; the just run to it and are safe."
+ },
+ {
+   "verse": "John 14:21",
+   "quote": "Whoever has my commandments and observes them is the one who loves me. And whoever loves me will be loved by my Father, and I will love him and reveal myself to him."
+ },
+ {
+   "verse": "Exodus 20:12",
+   "quote": "Honour your father and your mother, that you may have a long life in the land the Lord your God is giving you."
+ },
+ {
+   "verse": "Psalms 19:1‭",
+   "quote": "The heavens declare the glory of God; the firmament proclaims the works of his hands."
+ },
+ {
+   "verse": "Revelation 21:4",
+   "quote": "He will wipe every tear from their eyes, and there shall be no more death or mourning, wailing or pain, [for] the old order has passed away."
+ },
+ {
+   "verse": "Ephesians 4:2",
+   "quote": "with all humility and gentleness, with patience, bearing with one another through love"
+ },
+ {
+   "verse": "Psalms 28:7",
+   "quote": "The Lord is my strength and my shield, in whom my heart trusts. I am helped, so my heart rejoices; with my song I praise him."
+ },
+ {
+   "verse": "Psalms 91:2",
+   "quote": "Say to the Lord , My refuge and fortress, my God in whom I trust."
+ },
+ {
+   "verse": "Isaiah 6:8",
+   "quote": "Then I heard the voice of the Lord saying, Whom shall I send? Who will go for us?. Here I am, I said; send me!"
+ },
+ {
+   "verse": "Matthew 5:14",
+   "quote": "You are the light of the world. A city set on a mountain cannot be hidden."
+ },
+ {
+   "verse": "Psalms 23:4",
+   "quote": "Even though I walk through the valley of the shadow of death, I will fear no evil, for you are with me; your rod and your staff comfort me."
+ }
 ]
