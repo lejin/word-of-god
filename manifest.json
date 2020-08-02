@@ -2,6 +2,12 @@
   "name": "Word of God",
   "version": "1.0",
   "manifest_version": 2,
+  "icons": {
+    "16": "image/bible_16.png",
+    "32": "image/bible_32.png",
+    "64": "image/bible_64.png",
+    "128": "image/bible_128.png"
+  },
   "chrome_url_overrides": {
     "newtab": "html/index.html"
   },
