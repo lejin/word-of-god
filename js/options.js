@@ -31,7 +31,7 @@ function initMaterialSelect() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  restore_options();
   initMaterialSelect();
+  restore_options();
 });
 document.getElementById('save').addEventListener('click', save_options);
