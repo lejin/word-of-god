@@ -2,7 +2,6 @@
 <html>
 
 <head>
-    <title>Language Options</title>
     <link rel="stylesheet" href="/css/materialize.min.css">
     <style>
         body {
@@ -17,12 +16,22 @@
             color: #fdc473 !important;
         }
 
-        #langText {
+        .dropdown-trigger {
+            color: #4b2746;
+            font-size: 14px !important;
+        }
+
+        .dropdown-content>li>span {
+            color: #4b2746;
             font-size: 14px;
         }
 
-        #language {
+        .selectLabel {
             font-size: 14px;
+        }
+
+        #status {
+            font-size: 13px;
         }
     </style>
 </head>
@@ -31,11 +40,22 @@
     <div class="row">
         <form class="col offset-s1 s10">
             <div class="row valign-wrapper">
-                <div class="col s6 theme-color1" id="langText">Language</div>
+                <div class="col s6 theme-color1 selectLabel">Language</div>
                 <div class="col s6">
                     <select id="language">
                         <option class="theme-color1" value="malayalam">Malayalam</option>
                         <option class="theme-color1" value="english">English</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row valign-wrapper">
+                <div class="col s6 theme-color1 selectLabel">Refresh</div>
+                <div class="col s6">
+                    <select id="refreshRate">
+                        <option class="theme-color1" value="always">always</option>
+                        <option class="theme-color1" value="hourly">hourly</option>
+                        <option class="theme-color1" value="daily">daily</option>
+                        <option class="theme-color1" value="weekly">weekly</option>
                     </select>
                 </div>
             </div>
