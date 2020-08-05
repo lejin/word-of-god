@@ -6,11 +6,14 @@ body {
 
 body {
     font-family: 'Special Elite', cursive;
+    background: #fff;
     color: #f1efe6;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition-property: background-color;
+    transition-duration: 3s;
 }
 
 blockquote {
