@@ -1,0 +1,21 @@
+body {
+    font-size: 14px;
+}
+
+.collection {
+    width: 150px;
+    margin: 0px;
+}
+
+.collection-header small {
+    margin-left: 10px;
+}
+
+.collection-item {
+    padding: 10px;
+}
+
+.collection-item .material-icons {
+    vertical-align: middle;
+    padding-right: 5px;
+}

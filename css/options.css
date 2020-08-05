@@ -1,0 +1,21 @@
+body {
+    font-size: 12px;
+}
+
+.dropdown-trigger {
+    color: #4b2746;
+    font-size: 14px !important;
+}
+
+.dropdown-content>li>span {
+    color: #4b2746;
+    font-size: 14px;
+}
+
+.selectLabel {
+    font-size: 14px;
+}
+
+#status {
+    font-size: 13px;
+}
