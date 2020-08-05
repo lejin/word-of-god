@@ -22,6 +22,7 @@ function restore_options() {
 
   }, function (items) {
     document.getElementById('language').value = items.language;
+    initMaterialSelect(); //re-initialise material select to set selected value
   });
 }
 
