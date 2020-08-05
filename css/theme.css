@@ -6,8 +6,13 @@
     }
 
     :root {
-        --theme-primary: #4b2746;
-        --theme-secondary: #fdc473;
+        /*Exact colors in logo*/
+        /* --theme-primary: #4b2746;
+        --theme-secondary: #fdc473; */
+
+        /* lighter version*/
+        --theme-primary: #880e4f;
+        --theme-secondary: #ff8f00;
     }
 
     .theme-color1 {

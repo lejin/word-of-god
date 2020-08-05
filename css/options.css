@@ -1,7 +1,3 @@
-body {
-    font-size: 12px;
-}
-
 .dropdown-trigger {
     color: var(--theme-primary);
     font-size: 14px !important;

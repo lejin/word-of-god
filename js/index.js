@@ -1,4 +1,4 @@
-let bgColors = ["#B71C1C", "#880E4F", "#4A148C", "#1A237E", "#006064", "#33691E"];
+let bgColors = ["#B71C1C", "#880E4F", "#4A148C", "#311b92", "#1a237e", "#0d47a1", "#01579b", "#006064", "#f57f17", "#1b5e20", "#33691E"];
 
 // Restores select box and checkbox state using the preferences
 // stored in chrome.storage.
