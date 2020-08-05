@@ -5,10 +5,15 @@
         src: local('Special Elite Regular'), local('SpecialElite-Regular'), url(https://fonts.gstatic.com/s/specialelite/v10/XLYgIZbkc4JPUL5CVArUVL0ntnAOTQ.ttf) format('truetype');
     }
 
+    :root {
+        --theme-primary: #4b2746;
+        --theme-secondary: #fdc473;
+    }
+
     .theme-color1 {
-        color: #4b2746 !important;
+        color: var(--theme-primary) !important;
     }
 
     .theme-color2 {
-        color: #fdc473 !important;
+        color: var(--theme-secondary) !important;
     }
