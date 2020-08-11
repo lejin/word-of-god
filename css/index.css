@@ -18,8 +18,8 @@ body {
 
 blockquote {
     font-weight: 100;
-    font-size: 2rem;
-    max-width: 600px;
+    font-size: 3vmax;
+    max-width: 70%;
     line-height: 1.4;
     position: relative;
     margin: 0;
@@ -30,25 +30,25 @@ blockquote:before,
 blockquote:after {
     position: absolute;
     color: #f1efe6;
-    font-size: 8rem;
-    width: 4rem;
-    height: 4rem;
+    font-size: 8vmax;
+    width: 4vmax;
+    height: 4vmax;
 }
 
 blockquote:before {
     content: '“';
-    left: -5rem;
-    top: -2rem;
+    left: -5vmax;
+    top: -2vmax;
 }
 
 blockquote:after {
     content: '”';
-    right: -5rem;
-    bottom: 1rem;
+    right: -5vmax;
+    bottom: 1vmax;
 }
 
 cite {
     line-height: 3;
     text-align: left;
-    font-size: 20px;
+    font-size: 2vmax;
 }
