@@ -34,8 +34,17 @@ function generateRandomQuote(json) {
 }
 
 function setRandomBGColor() {
-    var randomNumber = getRandomInt(bgColors.length);
-    document.body.style.backgroundColor = bgColors[randomNumber];
+    var bgColor=getRandomColor();
+    chrome.storage.local.get(['lastColor'], function(result) {
+        if(null!=result.lastColor && result.lastColor==bgColor){
+            do{
+               bgColor=getRandomColor(); 
+            }while(bgColor!=result.lastColor);
+        }
+      });
+    document.body.style.backgroundColor = bgColor;
+    chrome.storage.local.set({lastColor: bgColor}, function() {
+      });
 }
 
 function getRandomInt(max) {
@@ -43,3 +52,8 @@ function getRandomInt(max) {
 }
 
 document.addEventListener('DOMContentLoaded', showQuote);
+
+function getRandomColor(){
+    var randomNumber = getRandomInt(bgColors.length);
+    return bgColors[randomNumber];
+}
