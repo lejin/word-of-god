@@ -51,7 +51,17 @@ let newTab = {
         document.body.style.backgroundColor = randomColor;
     },
 
-
+    rotateHSLColorBG() {
+        let hueInc = 12;
+        chrome.storage.local.get(['hue'], function (result) {
+            let hue = result.hue !== undefined && result.hue + hueInc <= 360 ? result.hue + hueInc : 0;
+            console.log(hue, result);
+            chrome.storage.local.set({ hue: hue }, function () {
+                document.body.style.backgroundColor = `hsl(${hue}, 50%, 50%)`;
+                document.body.style.color = "#f1efe6";
+            });
+        });
+    },
 
     // Restores select box and checkbox state using the preferences
     // stored in chrome.storage.
@@ -77,7 +87,8 @@ let newTab = {
     //Show random quote on new tab
     generateRandomQuote(json) {
         //newTab.setRandomBGColor();
-        newTab.chromaSetRandomBG();
+        //newTab.chromaSetRandomBG();
+        newTab.rotateHSLColorBG();
         var randomNumber = newTab.getRandomInt(json.length);
         document.getElementById('quote').textContent = json[randomNumber].quote;
         document.getElementById('verse').textContent = json[randomNumber].verse;
