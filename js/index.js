@@ -57,7 +57,7 @@ let newTab = {
             let hue = result.hue !== undefined && result.hue + hueInc <= 360 ? result.hue + hueInc : 0;
             console.log(hue, result);
             chrome.storage.local.set({ hue: hue }, function () {
-                document.body.style.backgroundColor = `hsl(${hue}, 50%, 50%)`;
+                document.body.style.backgroundColor = `hsl(${hue}, 80%, 40%)`;
                 document.body.style.color = "#f1efe6";
             });
         });
@@ -96,6 +96,27 @@ let newTab = {
         newTab.getMostVisitedUrls();
     },
 
+    shortenLinkTitle(title) {
+        title = title.trim();
+        if (title.length > 20) {
+            title = title.substr(0, 20);
+            let indexOfSpace = title.lastIndexOf(" ");
+            if (indexOfSpace) {
+                title = title.substring(0, indexOfSpace);
+                title = title.replace(/[\s\W]+$/, "");
+            }
+            return title;
+        } else {
+            return title;
+        }
+    },
+
+    getLinkIcon(url) {
+        let base = new URI(url).origin();
+        let iconUrl = `${base}/favicon.ico`;
+        return `<img src="${iconUrl}"></img>`;
+    },
+
     getMostVisitedUrls() {
         var microsecondsPerWeek = 1000 * 60 * 60 * 24 * 7;
         var oneWeekAgo = (new Date).getTime() - microsecondsPerWeek;
@@ -115,11 +136,12 @@ let newTab = {
                         break;
                     }
                     const linkInfo = historyItems[key];
-                    console.log(linkInfo);
-                    linksHtml += `<a href="${linkInfo.url}" target="_self">${linkInfo.title.substr(0,50)}</a>`;
+                    linksHtml += `<a class="hisLink" href="${linkInfo.url}" target="_self"
+                        title="${linkInfo.title}">${newTab.shortenLinkTitle(linkInfo.title)}</a>`;
                 }
             }
             document.getElementById("mostVisited").innerHTML = linksHtml;
+            document.getElementById("mostVisited").classList.add("show");
         });
     }
 
