@@ -20,7 +20,7 @@
     "default_popup": "html/popup.html"
   },
   "permissions": [
-    "storage"
+    "storage", "history"
   ],
   "web_accessible_resources": [
     "data/*.json"

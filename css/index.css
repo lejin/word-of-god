@@ -52,3 +52,21 @@ cite {
     text-align: left;
     font-size: 2vmax;
 }
+
+div#mostVisited {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-flow: wrap;
+}
+
+div#mostVisited a {
+    display: block;
+    margin: 1.5vw;
+    width: 7vw;
+    overflow: hidden;
+    border: 1px solid white;
+    border-radius: 10px;
+    height: 10vh;
+    padding: 9px;
+}

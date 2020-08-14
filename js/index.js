@@ -92,7 +92,36 @@ let newTab = {
         var randomNumber = newTab.getRandomInt(json.length);
         document.getElementById('quote').textContent = json[randomNumber].quote;
         document.getElementById('verse').textContent = json[randomNumber].verse;
+
+        newTab.getMostVisitedUrls();
     },
+
+    getMostVisitedUrls() {
+        var microsecondsPerWeek = 1000 * 60 * 60 * 24 * 7;
+        var oneWeekAgo = (new Date).getTime() - microsecondsPerWeek;
+
+        chrome.history.search({
+            'text': "",
+            'startTime': oneWeekAgo
+        }, (historyItems) => {
+            historyItems.sort((a, b) => a.visitCount > b.visitCount ? -1 : 1);
+            //console.table(historyItems);
+            let linkCount = 0;
+            let linksHtml = '';
+            for (const key in historyItems) {
+                if (historyItems.hasOwnProperty(key)) {
+                    ++linkCount;
+                    if (linkCount > 10) {
+                        break;
+                    }
+                    const linkInfo = historyItems[key];
+                    console.log(linkInfo);
+                    linksHtml += `<a href="${linkInfo.url}" target="_self">${linkInfo.title.substr(0,50)}</a>`;
+                }
+            }
+            document.getElementById("mostVisited").innerHTML = linksHtml;
+        });
+    }
 
 };
 
