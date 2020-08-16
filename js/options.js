@@ -26,9 +26,11 @@ let Options = {
     // Use default value language=english.
     chrome.storage.local.get({
       language: 'english',
-      links: false
+      links: false,
+      refresh: 'always'
     }, function (items) {
       document.getElementById('language').value = items.language;
+      document.getElementById('refreshRate').value = items.refresh;
       document.getElementById('mostUsedLinks').checked = items.links
       Options.initMaterialSelect(); //re-initialise material select to set selected value
     });
@@ -39,10 +41,12 @@ let Options = {
    */
   saveOptions() {
     var language = document.getElementById('language').value;
+    var refresh = document.getElementById('refreshRate').value;
     var links = document.getElementById('mostUsedLinks').checked;
     chrome.storage.local.set({
       language: language,
-      links: links
+      links: links,
+      refresh: refresh
     }, function () {
       // Update status to let user know options were saved.
       var status = document.getElementById('status');

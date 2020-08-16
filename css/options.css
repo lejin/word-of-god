@@ -7,9 +7,18 @@ body {
     font-size: 14px !important;
 }
 
+.select-wrapper input.select-dropdown {
+    height: 2rem;
+}
+
+.dropdown-content li {
+    min-height: auto;
+}
+
 .dropdown-content>li>span {
     color: var(--theme-primary);
     font-size: 14px;
+    padding: 8px 16px;
 }
 
 #status {
