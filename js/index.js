@@ -68,7 +68,8 @@ let newTab = {
     showQuote() {
         // Use default value language=english.
         chrome.storage.local.get({
-            language: 'english'
+            language: 'english',
+            links: false
         }, function (items) {
             if (items.language == 'malayalam') {
                 const url = chrome.runtime.getURL('/data/malayalam.json');
@@ -81,6 +82,10 @@ let newTab = {
                     .then((response) => response.json())
                     .then((json) => newTab.generateRandomQuote(json));
             }
+            
+            if (items.links) {
+                newTab.getMostVisitedUrls();
+            }
         });
     },
 
@@ -92,8 +97,6 @@ let newTab = {
         var randomNumber = newTab.getRandomInt(json.length);
         document.getElementById('quote').textContent = json[randomNumber].quote;
         document.getElementById('verse').textContent = json[randomNumber].verse;
-
-        newTab.getMostVisitedUrls();
     },
 
     shortenLinkTitle(title) {

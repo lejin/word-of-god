@@ -1,3 +1,7 @@
+body {
+    font-size: 14px;
+}
+
 .dropdown-trigger {
     color: var(--theme-primary);
     font-size: 14px !important;
@@ -5,10 +9,6 @@
 
 .dropdown-content>li>span {
     color: var(--theme-primary);
-    font-size: 14px;
-}
-
-.selectLabel {
     font-size: 14px;
 }
 
