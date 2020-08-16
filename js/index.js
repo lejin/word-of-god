@@ -67,7 +67,7 @@ let newTab = {
     // stored in chrome.storage.
     showQuote() {
         // Use default value language=english.
-        chrome.storage.sync.get({
+        chrome.storage.local.get({
             language: 'english'
         }, function (items) {
             if (items.language == 'malayalam') {
