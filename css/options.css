@@ -2,13 +2,21 @@ body {
     font-size: 14px;
 }
 
+.material-icons {
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
 .dropdown-trigger {
     color: var(--theme-primary);
     font-size: 14px !important;
 }
 
-.select-wrapper input.select-dropdown {
+.select-wrapper input.select-dropdown,
+.select-wrapper input.select-dropdown:focus {
     height: 2rem;
+    border: none;
+    margin: 0px;
 }
 
 .dropdown-content li {
