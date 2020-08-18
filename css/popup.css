@@ -11,8 +11,8 @@ body {
     margin-left: 10px;
 }
 
-.collection-item {
-    padding: 10px;
+.collection .collection-item {
+    border-bottom: none;
 }
 
 .collection-item .material-icons {

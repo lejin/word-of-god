@@ -29,6 +29,10 @@ body {
     padding: 8px 16px;
 }
 
+#save {
+    background-color: var(--theme-secondary) !important;
+}
+
 #status {
     font-size: 13px;
 }

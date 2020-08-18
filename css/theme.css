@@ -10,15 +10,18 @@
         /* --theme-primary: #4b2746;
         --theme-secondary: #fdc473; */
 
-        /* lighter version*/
+        /*Color Palette: https://www.w3schools.com/colors/tryit.asp?filename=trycolors_palettes22*/
+        /* --theme-primary: #d64161; */
         --theme-primary: #880e4f;
-        --theme-secondary: #ff8f00;
+        --theme-secondary: #feb236;
+        --theme-highlight: #6b5b95;
+        --theme-optional: #ff7b25;
     }
 
-    .theme-color1 {
+    .primary-text {
         color: var(--theme-primary) !important;
     }
 
-    .theme-color2 {
+    .secondary-text {
         color: var(--theme-secondary) !important;
     }
