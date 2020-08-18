@@ -51,7 +51,7 @@ let newTab = {
         document.body.style.backgroundColor = randomColor;
     },
 
-    rotateHSLColorBG() {
+    rotateHSLColorBG(storage) {
         let hueInc = 12;
         chrome.storage.local.get(['hue'], function (result) {
             let hue = result.hue !== undefined && result.hue + hueInc <= 360 ? result.hue + hueInc : 0;
@@ -59,6 +59,12 @@ let newTab = {
             chrome.storage.local.set({ hue: hue }, function () {
                 document.body.style.backgroundColor = `hsl(${hue}, 80%, 40%)`;
                 document.body.style.color = "#f1efe6";
+                if (storage.links) {
+                    let mostUsedLinks = document.querySelectorAll(".hisLink");
+                    mostUsedLinks.forEach(link => {
+                        link.style.color = `hsl(${hue}, 80%, 80%)`;
+                    });
+                }
             });
         });
     },
@@ -135,7 +141,7 @@ let newTab = {
         }, () => {
             //newTab.setRandomBGColor();
             //newTab.chromaSetRandomBG();
-            newTab.rotateHSLColorBG();
+            newTab.rotateHSLColorBG(storage);
 
             document.getElementById('quote').textContent = json[wogIndex].quote;
             document.getElementById('verse').textContent = json[wogIndex].verse;
