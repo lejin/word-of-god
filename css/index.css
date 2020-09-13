@@ -13,7 +13,7 @@ body {
     align-items: center;
     justify-content: center;
     transition-property: color, background-color;
-    transition-duration: 3s;
+    transition-duration: 1s;
 }
 
 #wog {

@@ -24,5 +24,6 @@
   ],
   "web_accessible_resources": [
     "data/*.json"
-  ]
+  ],
+  "content_security_policy": "script-src 'self' https://*.sharethis.com; object-src 'self'"
 }
