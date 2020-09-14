@@ -69,20 +69,23 @@ let newTab = {
         // Use default value language=english.
         chrome.storage.local.get({
             language: 'english',
-            links: false
+            links: false,
+            refresh: 'always',
+            index: null,
+            time: null
         }, function (items) {
             if (items.language == 'malayalam') {
                 const url = chrome.runtime.getURL('/data/malayalam.json');
                 fetch(url)
                     .then((response) => response.json())
-                    .then((json) => newTab.generateRandomQuote(json));
+                    .then((json) => newTab.generateRandomQuote(json, items));
             } else {
                 const url = chrome.runtime.getURL('/data/english.json');
                 fetch(url)
                     .then((response) => response.json())
-                    .then((json) => newTab.generateRandomQuote(json));
+                    .then((json) => newTab.generateRandomQuote(json, items));
             }
-            
+
             if (items.links) {
                 newTab.getMostVisitedUrls();
             }
@@ -90,13 +93,53 @@ let newTab = {
     },
 
     //Show random quote on new tab
-    generateRandomQuote(json) {
-        //newTab.setRandomBGColor();
-        //newTab.chromaSetRandomBG();
-        newTab.rotateHSLColorBG();
-        var randomNumber = newTab.getRandomInt(json.length);
-        document.getElementById('quote').textContent = json[randomNumber].quote;
-        document.getElementById('verse').textContent = json[randomNumber].verse;
+    generateRandomQuote(json, storage) {
+        let wogIndex, wogTime = Date.now();
+
+        if (storage.index && storage.time && storage.refresh !== 'always') {
+            const cDateTime = new Date();
+            const cYear = cDateTime.getFullYear();
+            const cMonth = cDateTime.getMonth();
+            const cDate = cDateTime.getDate();
+            const cHour = cDateTime.getHours();
+
+            const lDateTime = new Date(storage.time);
+            const lYear = lDateTime.getFullYear();
+            const lMonth = lDateTime.getMonth();
+            const lDate = lDateTime.getDate();
+            const lHour = lDateTime.getHours();
+
+            const dateDiff = Math.floor((cDateTime.getTime() - lDateTime.getTime()) / (24 * 60 * 60 * 1000));
+
+            console.log(dateDiff);
+
+            if (storage.refresh === 'hourly' && (cYear > lYear || cMonth > lMonth || cDate > lDate || cHour > lHour)) { //refresh every hour
+                wogIndex = newTab.getRandomInt(json.length);
+            } else if (storage.refresh === 'daily' && (cYear > lYear || cMonth > lMonth || cDate > lDate)) { //refresh everyday
+                wogIndex = newTab.getRandomInt(json.length);
+            } else if (storage.refresh === 'monthly' && (cYear > lYear || cMonth > lMonth)) { // refresh 1st day of every month
+                wogIndex = newTab.getRandomInt(json.length);
+            } else if (storage.refresh === 'weekly' && (dateDiff > 6 || lDateTime.getDay() > cDateTime.getDay() || dateDiff > 0 && cDateTime.getDay() === 0)) { //refresh on every Sunday
+                wogIndex = newTab.getRandomInt(json.length);
+            } else {
+                wogIndex = storage.index;
+                wogTime = storage.time;
+            }
+        } else {
+            wogIndex = newTab.getRandomInt(json.length);
+        }
+
+        chrome.storage.local.set({
+            index: wogIndex,
+            time: wogTime
+        }, () => {
+            //newTab.setRandomBGColor();
+            //newTab.chromaSetRandomBG();
+            newTab.rotateHSLColorBG();
+
+            document.getElementById('quote').textContent = json[wogIndex].quote;
+            document.getElementById('verse').textContent = json[wogIndex].verse;
+        });
     },
 
     shortenLinkTitle(title) {
