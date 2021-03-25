@@ -5,7 +5,7 @@ body {
 }
 
 body {
-    font-family: 'Special Elite', cursive;
+    font-family: "Special Elite", cursive;
     background: #000;
     color: #000;
     display: flex;
@@ -14,6 +14,7 @@ body {
     justify-content: center;
     transition-property: color, background-color;
     transition-duration: 3s;
+    quotes: "\201c""\201d";
 }
 
 #wog {
@@ -44,13 +45,13 @@ blockquote:after {
 }
 
 blockquote:before {
-    content: '“';
+    content: open-quote;
     left: -5vmax;
     top: -2vmax;
 }
 
 blockquote:after {
-    content: '”';
+    content: close-quote;
     right: -5vmax;
     bottom: 1vmax;
 }
@@ -84,4 +85,65 @@ div#mostVisited a {
     background: rgba(0, 0, 0, 0.15);
     margin: 5px;
     border-radius: 20px;
+}
+
+/* Search */
+
+form#search-form {
+    background-color: rgba(0, 0, 0, 0.15);
+    width: 80%;
+    height: 44px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+input {
+    background-color: rgba(0, 0, 0, 0) !important;
+    border: none !important;
+    outline: none !important;
+    font: 16px system-ui;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    padding: 6px 10px;
+}
+
+::placeholder {
+    color: #fff;
+    opacity: 0.7;
+}
+
+svg {
+    color: #fff;
+    fill: currentColor;
+    width: 24px;
+    height: 24px;
+    padding: 10px;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+}
+
+@media (min-width: 560px) {
+    form#search-form {
+        width: 70vmax;
+    }
+}
+
+@media only screen and (min-width: 672px) {
+    form#search-form {
+        width: 55vmax;
+    }
+}
+
+@media only screen and (min-width: 991px) {
+    form#search-form {
+        width: 45vmax;
+    }
 }
