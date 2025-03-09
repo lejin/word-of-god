@@ -16,5 +16,5 @@ FireFox :  https://addons.mozilla.org/en-US/firefox/addon/word-box/
 ![image](https://user-images.githubusercontent.com/6481007/146543435-26a9263c-ef79-4792-b788-aaf6c310c12c.png)
 
 
-#Privacy policy
+# Privacy policy
 We use user history only to show most visited URLs , not using it in any other manner. 
