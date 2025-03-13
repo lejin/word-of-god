@@ -1,8 +1,8 @@
 {
   "name": "Word Box",
-  "version": "2.0",
-  "manifest_version": 2,
-  "description" : "Get a Word of God on every New Tab",
+  "version": "2.1",
+  "manifest_version": 3,
+  "description": "Get a Word of God on every New Tab",
   "icons": {
     "16": "image/bible_16.png",
     "32": "image/bible_32.png",
@@ -16,13 +16,17 @@
     "page": "html/options.html",
     "open_in_tab": false
   },
-  "browser_action": {
+  "action": {
     "default_popup": "html/popup.html"
   },
   "permissions": [
-    "storage", "history"
+    "storage",
+    "history"
   ],
   "web_accessible_resources": [
-    "data/*.json"
+    {
+      "resources": ["data/*.json"],
+      "matches": ["<all_urls>"]
+    }
   ]
 }
